@@ -6,11 +6,11 @@ import AppNavigator from './router/AppNavigator';
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <Provider store={store}>
-        <AppNavigator />
-      </Provider>
-    </SafeAreaView>
+    // <SafeAreaView style={{flex: 1}}>
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
+    // </SafeAreaView>
   );
 }
 

@@ -26,18 +26,21 @@ import CardItem from '../../components/molekuls/CardItem';
 import {useNavigation} from '@react-navigation/native';
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   const {memoizedPokemons, loadMorePokemon, loading} = useHome();
 
   return (
     <ResponsiveView>
       {/* <SafeAreaView> */}
+      <View style={{marginTop: 32}} />
       <Header />
       <Image
         source={PokeballBackground}
         resizeMode="contain"
         style={styles.imageBackground}
       />
-      <Text style={[typography.heading1Regular, {marginTop: 32}]}>
+
+      <Text style={[typography.heading1Regular, {marginTop: 30}]}>
         Select Your
       </Text>
       <View style={styles.flexTitle}>

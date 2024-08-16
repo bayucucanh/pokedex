@@ -13,13 +13,17 @@ const CardItem = ({item}: {item: Pokemon}) => {
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('DetailScreen')}
+      onPress={() => navigation.navigate('DetailScreen', {item: item})}
       style={[
         styles.container,
         {marginTop: 30, marginBottom: 20, backgroundColor: pokemonColor},
       ]}>
       {/* <Image source={FlameBackground} style={styles.backgroundImage} /> */}
-      <Image source={{uri: item?.imgUrl}} style={styles.pokemon} />
+      <Image
+        source={{uri: item?.imgUrl}}
+        style={styles.pokemon}
+        resizeMode="contain"
+      />
       <View style={{padding: 16}}>
         <Text style={[typography.heading2Bold, {color: '#000000', zIndex: 2}]}>
           {item?.name}

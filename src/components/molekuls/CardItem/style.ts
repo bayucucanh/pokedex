@@ -16,10 +16,10 @@ export const styles = StyleSheet.create({
   },
   pokemon: {
     width: 200,
-    height: '100%',
+    height: '110%',
     position: 'absolute',
     zIndex: 1,
-    right: 0,
+    right: -10,
     top: -30,
   },
   categoryWrapper: {

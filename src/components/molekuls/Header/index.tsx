@@ -2,11 +2,15 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {BackLeft} from '../../../assets/icons';
 import {Avatar} from '../../../assets/images';
+import {useNavigation} from '@react-navigation/native';
 
 const Header = () => {
+  const navigation = useNavigation();
   return (
     <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-      <TouchableOpacity style={styles.wrapperBack}>
+      <TouchableOpacity
+        style={styles.wrapperBack}
+        onPress={() => navigation.goBack()}>
         <Image
           source={BackLeft}
           resizeMode="contain"

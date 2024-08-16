@@ -1,8 +1,9 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {Pokemon} from '../../pages/HomeScreen/types';
 
 interface PokemonState {
   list: any[];
-  myPokemons: {nickname: string; pokemon: any}[];
+  myPokemons: any[];
 }
 
 const initialState: PokemonState = {
@@ -17,10 +18,7 @@ const pokemonSlice = createSlice({
     setPokemonList: (state, action: PayloadAction<any[]>) => {
       state.list = action.payload;
     },
-    addPokemonToMyList: (
-      state,
-      action: PayloadAction<{nickname: string; pokemon: any}>,
-    ) => {
+    addPokemonToMyList: (state, action: PayloadAction<Pokemon>) => {
       state.myPokemons.push(action.payload);
     },
     removePokemonFromMyList: (state, action: PayloadAction<string>) => {
